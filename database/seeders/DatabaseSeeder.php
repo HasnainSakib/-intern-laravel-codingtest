@@ -20,11 +20,18 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        // User::create([
+        //     'name' => 'Webase Applicant',
+        //     'email' => 'hello@webase.com.bd',
+        //     'password' => Hash::make('webase123'),
+        // ]);
+
         User::create([
-            'name' => 'Webase Applicant',
-            'email' => 'hello@webase.com.bd',
+            'name' => 'Sakib2',
+            'email' => 'sakib2@webase.com',
             'password' => Hash::make('webase123'),
         ]);
+
     	$this->call([
             ProductSeeder::class,
     	]);
