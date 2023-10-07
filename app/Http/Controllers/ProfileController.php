@@ -26,7 +26,6 @@ class ProfileController extends Controller
      */
     public function update($id, Request $request): RedirectResponse
     {
-    logger($request->all());
         // Write your own code 
 
         $request->validate([

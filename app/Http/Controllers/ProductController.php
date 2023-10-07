@@ -11,9 +11,10 @@ class ProductController extends Controller
     {
         $query = Product::query();
 
-        // if ($request->filled('search')) {
-        //     $query->where('name', 'like', '%' . $request->input('search') . '%');
-        // }
+        if ($request->filled('search')) {
+            $query->where('name', 'like', '%' . $request->input('search') . '%')
+            ->orWhere('description', 'like', '%' . $request->input('search') . '%');
+        }
 
         $products = $query->get();
 
@@ -22,7 +23,7 @@ class ProductController extends Controller
 
     public function searchProduct(Request $request)
     {
-        
+     
     }
     
 }
